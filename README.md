@@ -1,59 +1,34 @@
-# AppRouting
+# Gestión y Visualización de Datos con Pipes y Servicios - UTN BA
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+## Descripción del Proyecto
+Este proyecto representa la resolución de la actividad práctica correspondiente al Módulo 1 - Unidad 4 del curso "Desarrollo en Angular" de la UTN BA.
 
-## Development server
+## Funcionalidades y Arquitectura de Código
+- **Navegación Dinámica Descentralizada:** Se configuró el enrutador principal enlazado a archivos de sub-rutas independientes (`usuarios.routes.ts` y `productos.routes.ts`) garantizando que los recursos se carguen únicamente al activar su respectivo segmento de URL.
+- **Rutas Dinámicas (`/productos/:id`):** Implementación de lecturas asincrónicas de parámetros variables desde la ruta utilizando la inyección de `ActivatedRoute` mediante capturas de instantáneas operativas.
+- **Persistencia de Sesión (`sessionStorage`):** Almacenamiento clave-valor automatizado en cada ciclo de vida `ngOnInit` para guardar el último módulo de interés del cliente y forzar una redirección inteligente inmediata a través de un componente de control unificado (`HomeComponent`).
+- **Navegación Fluida:** Despliegue estructural basado estrictamente en el uso coordinado de las directivas `routerLink` y `<router-outlet>`.
 
-To start a local development server, run:
+---
 
+## Instrucciones de Instalación y Ejecución
+
+### 1. Clonar el repositorio
+Descargue una copia local del proyecto ejecutando:
+```bash
+git clone git@github.com:mazypincha/app-routing.git
+```
+
+### 2. Instalar dependencias
+```bash
+cd app-productos
+npm install
+```
+
+### 3. Ejecutar la aplicación
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 4. Acceso en el navegador
+http://localhost:4200/
