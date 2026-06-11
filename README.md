@@ -21,7 +21,7 @@ git clone git@github.com:mazypincha/app-routing.git
 
 ### 2. Instalar dependencias
 ```bash
-cd app-productos
+cd app-routing
 npm install
 ```
 
